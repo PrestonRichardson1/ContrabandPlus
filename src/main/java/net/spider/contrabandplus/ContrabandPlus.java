@@ -18,7 +18,6 @@ import org.slf4j.Logger;
 @Mod(ContrabandPlus.MOD_ID)
 public class ContrabandPlus {
     public static final String MOD_ID = "contrabandplus";
-
     private static final Logger LOGGER = LogUtils.getLogger();
     public ContrabandPlus() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -28,7 +27,7 @@ public class ContrabandPlus {
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
